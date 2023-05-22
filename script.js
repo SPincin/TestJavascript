@@ -63,18 +63,18 @@ function deleteUser(row) {
   
 
  
-function editUser(row) {
-    var i = row.parentNode.parentNode.rowIndex;
+  function editUser(row) {
     var table = document.getElementById("userTable");
-    var nome = table.rows[i].cells[0].innerHTML;
-    var cognome = table.rows[i].cells[1].innerHTML;
-    var email = table.rows[i].cells[2].innerHTML;
+    var rowIndex = row.closest("tr").rowIndex;
+    var nome = table.rows[rowIndex].cells[0].innerHTML;
+    var cognome = table.rows[rowIndex].cells[1].innerHTML;
+    var email = table.rows[rowIndex].cells[2].innerHTML;
   
     document.getElementById("nome").value = nome;
     document.getElementById("cognome").value = cognome;
     document.getElementById("email").value = email;
   
-    table.deleteRow(i);
+    table.deleteRow(rowIndex);
   }
   
 
