@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gestione Utenti</title>
+  <!-- Collegamento a Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="mt-4">Gestione Utenti</h2>
+
+    <h3 class="mt-4">Aggiungi Utente</h3>
+    <div class="form-group">
+      <input type="text" class="form-control" id="nome" placeholder="Nome">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="cognome" placeholder="Cognome">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="email" placeholder="Email">
+    </div>
+    <button class="btn btn-primary" onclick="addUser()">Aggiungi</button>
+
+    <h3 class="mt-4">Ricerca Utente</h3>
+    <div class="form-group">
+      <input type="text" class="form-control" id="searchInput" placeholder="Cerca per nome, cognome o email">
+    </div>
+    <button class="btn btn-primary" onclick="searchUser()">Cerca</button>
+
+    <h3 class="mt-4">Lista Utenti</h3>
+    <table id="userTable" class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Cognome</th>
+          <th>Email</th>
+          <th>Azioni</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
