@@ -79,29 +79,25 @@ function editUser(row) {
   
 
 
-function searchUser() {
+  function searchUser() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     let table = document.getElementById("userTable");
     let rows = table.getElementsByTagName("tr");
-  
+    
     for (let i = 0; i < rows.length; i++) {
       let cells = rows[i].getElementsByTagName("td");
-      let found = false;
-  
+      let rowMatches = false;
+    
       for (let j = 0; j < cells.length; j++) {
         let cellValue = cells[j].innerHTML.toLowerCase();
-  
-        if (cellValue.indexOf(input) > -1) {
-          found = true;
+    
+        if (cellValue.includes(input)) {
+          rowMatches = true;
           break;
         }
       }
-  
-      if (found) {
-        rows[i].style.display = "";
-      } else {
-        rows[i].style.display = "none";
-      }
+    
+      rows[i].style.display = rowMatches ? "" : "none";
     }
   }
   
